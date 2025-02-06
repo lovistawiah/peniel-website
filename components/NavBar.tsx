@@ -16,10 +16,10 @@ const NavBar = () => {
     <section
       className={`${
         !isOpen ? "bg-black md:bg-transparent" : ""
-      } top-0 left-0 h-full md:h-[100px] right-0 bottom-0 flex flex-col md:flex-row absolute  md:justify-between md:items-center md:mx-2 md:my-2`}
+      } top-0 left-0 h-full md:h-[95%] right-0 bottom-0 flex flex-col md:flex-row absolute  md:justify-between md:mx-2 md:my-2`}
     >
       <section className=" flex justify-between p-2 mt-4 md:mt-0 md:w-fit md:h-fit">
-        <Link href="/" passHref className="md:w-[60px] md:h-[60px]">
+        <Link href="/" passHref className="md:w-[76px] md:mt-3 md:h-[76px]">
           <Image
             src="/PHMLogo.png"
             width={100}
@@ -53,21 +53,23 @@ const NavBar = () => {
               />
             ))}
           </ul>
-          <section className="mt-5 w-full h-fit flex  justify-center items-center gap-7 p-1 md:hidden">
-            <Link href="/" passHref>
-              <LuFacebook className={iconClass} />
-            </Link>
-            <Link href="/" passHref>
-              <LuYoutube className={iconClass} />
-            </Link>
-            <Link href="/" passHref>
-              <LuTwitter className={iconClass} />
-            </Link>
-            <Link href="/" passHref>
-              <LuInstagram className={iconClass} />
-            </Link>
-          </section>
         </nav>
+      ) : null}
+      {!isOpen || width > 767 ? (
+        <section className="mt-5  md:w-fit w-full h-fit flex absolute bottom-0 right-6 justify-center items-center gap-7 p-1">
+          <Link href="/" passHref>
+            <LuFacebook className={iconClass} />
+          </Link>
+          <Link href="/" passHref>
+            <LuYoutube className={iconClass} />
+          </Link>
+          <Link href="/" passHref>
+            <LuTwitter className={iconClass} />
+          </Link>
+          <Link href="/" passHref>
+            <LuInstagram className={iconClass} />
+          </Link>
+        </section>
       ) : null}
     </section>
   );
