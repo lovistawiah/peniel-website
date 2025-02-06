@@ -1,32 +1,35 @@
+import { FaUsers, FaPhoneAlt, } from 'react-icons/fa'
+import { GiBookshelf, GiChurch, } from 'react-icons/gi'
+import { PiHandCoinsBold } from 'react-icons/pi'
 export const SIDEBARLIST = [
     {
         id: 1,
         title: 'About Us',
         href: '/about-us',
-        imgUrl: '/about_us.svg',
+        icon: GiChurch,
     },
     {
         id: 2,
         title: 'Contact Us',
         href: '/contact-us',
-        imgUrl: '/contact.svg',
+        icon: FaPhoneAlt,
     },
     {
         id: 3,
         title: 'Ministries',
         href: '/ministries',
-        imgUrl: '/ministries.svg',
+        icon: FaUsers,
     },
     {
         id: 4,
         title: 'Books',
         href: '/books',
-        imgUrl: '/books.svg',
+        icon: GiBookshelf,
     },
     {
         id: 5,
         title: 'Give',
         href: '/give',
-        imgUrl: '/give.svg',
+        icon: PiHandCoinsBold,
     },
 ]
