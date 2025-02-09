@@ -33,3 +33,11 @@ export const SIDEBARLIST = [
         icon: PiHandCoinsBold,
     },
 ]
+export const catPictures = [
+    "/cat.jpg",
+    "/banner.png",
+    "/21 days.png",
+
+];
+
+

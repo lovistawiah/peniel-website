@@ -16,7 +16,7 @@ const NavBar = () => {
     <section
       className={`${
         !isOpen ? "bg-black md:bg-transparent" : ""
-      } top-0 left-0 h-full md:h-[95%] right-0 bottom-0 flex flex-col md:flex-row absolute  md:justify-between md:mx-2 md:my-2`}
+      } top-0 w-full flex fixed flex-col md:flex-row  md:justify-between md:mx-2 md:my-2`}
     >
       <section className=" flex justify-between p-2 mt-4 md:mt-0 md:w-fit md:h-fit">
         <Link href="/" passHref className="md:w-[76px] md:mt-3 md:h-[76px]">
@@ -55,8 +55,8 @@ const NavBar = () => {
           </ul>
         </nav>
       ) : null}
-      {!isOpen || width > 767 ? (
-        <section className="mt-5  md:w-fit w-full h-fit flex absolute bottom-0 right-6 justify-center items-center gap-7 p-1">
+      {!isOpen && (
+        <section className="mt-5  md:w-fit w-full h-fit flex md:absolute md:bottom-0 md:right-6 justify-center items-center gap-7 p-1">
           <Link href="/" passHref>
             <LuFacebook className={iconClass} />
           </Link>
@@ -70,7 +70,7 @@ const NavBar = () => {
             <LuInstagram className={iconClass} />
           </Link>
         </section>
-      ) : null}
+      )}
     </section>
   );
 };
